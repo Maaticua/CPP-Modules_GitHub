@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 17:12:19 by macaruan          #+#    #+#             */
-/*   Updated: 2025/11/14 18:34:43 by macaruan         ###   ########.fr       */
+/*   Updated: 2025/11/17 18:03:10 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PHONEBOOK_H
 
 # include "Contact.hpp"
+# include <limits>
 # include <cctype>
 # include <iomanip>
 # include <iostream>
