@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 14:15:19 by macaruan          #+#    #+#             */
-/*   Updated: 2025/11/19 14:15:20 by macaruan         ###   ########.fr       */
+/*   Updated: 2025/11/19 16:24:19 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ private:
 	int				_nbWithdrawals;
 
 	Account( void );
-
 };
 
 
