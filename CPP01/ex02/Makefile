@@ -1,4 +1,4 @@
-NAME		= zombie
+NAME		= brain
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
@@ -6,10 +6,7 @@ CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 SRCDIR		= ./
 OBJDIR		= obj
 
-SRCS		=	main.cpp \
-				Zombie.cpp \
-				newZombie.cpp \
-				randomChump.cpp
+SRCS		= main.cpp
 
 OBJS		= $(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))
 

@@ -5,21 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/20 13:11:16 by macaruan          #+#    #+#             */
-/*   Updated: 2025/11/20 16:39:37 by macaruan         ###   ########.fr       */
+/*   Created: 2025/11/20 16:42:49 by macaruan          #+#    #+#             */
+/*   Updated: 2025/11/20 16:57:09 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-
 int main()
 {
-	Zombie* heapZombie = newZombie("heapZombie");
-	heapZombie->announce();
-	delete heapZombie;
+	int n = 5;
+	Zombie* horde = zombieHorde(n, "HordeZombie");
 
-	randomChump("StackZombie");
+	for (int i = 0; i < n; i++)
+	{
+		horde[i].announce();
+	}
 
-	return (0);
+	delete[] horde;
+	return 0;
 }
