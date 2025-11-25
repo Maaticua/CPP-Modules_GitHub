@@ -5,41 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/14 17:11:31 by macaruan          #+#    #+#             */
-/*   Updated: 2025/11/24 15:46:29 by macaruan         ###   ########.fr       */
+/*   Created: 2025/11/25 11:31:27 by macaruan          #+#    #+#             */
+/*   Updated: 2025/11/25 12:02:49 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#include "Fixed.hpp"
 
 int main()
 {
-	PhoneBook phonebook;
-	std::string command;
-	while (1)
-	{
-		std::cout << "Entrez une commande (ADD, SEARCH, EXIT): ";
-		std::cin >> command;
+	Fixed a;
+	//a.setRawBits(10);
+	Fixed b(a);
+	Fixed c;
 
-		if (std::cin.eof())
-		{
-			std::cout << std::endl;
-			break;
-		}
+	c = b;
 
-		if (std::cin.fail())
-		{
-			std::cin.clear();
-			std::cin.ignore(10000, '\n');
-			continue;
-		}
+	std::cout << a.getRawBits() << std::endl;
+	a.setRawBits(42);
+	std::cout << a.getRawBits() << std::endl;
 
-		if (command == "ADD")
-			phonebook.AddContact();
-		else if (command == "SEARCH")
-			phonebook.SearchContact();
-		else if (command == "EXIT")
-			break;
-	}
-	return (0);
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
+
+	return 0;
 }
