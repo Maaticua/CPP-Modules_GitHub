@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/25 12:06:18 by macaruan          #+#    #+#             */
-/*   Updated: 2025/11/25 16:35:59 by macaruan         ###   ########.fr       */
+/*   Created: 2025/11/26 15:04:10 by macaruan          #+#    #+#             */
+/*   Updated: 2025/11/26 17:12:14 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,95 @@ int Fixed::getRawBits() const
 void Fixed::setRawBits(int const raw)
 {
 	_value = raw;
+}
+
+Fixed Fixed::operator+(const Fixed& nbr) const
+{
+	Fixed result;
+	result._value = this->_value + nbr._value;
+	return result;
+}
+
+Fixed Fixed::operator-(const Fixed& nbr) const
+{
+	Fixed result;
+	result._value = this->_value - nbr._value;
+	return result;
+}
+
+Fixed Fixed::operator*(const Fixed& nbr) const
+{
+	Fixed result;
+	result._value = (this->_value * nbr._value) >> _fractionalBits;
+	return result;
+}
+
+Fixed Fixed::operator/(const Fixed& nbr) const
+{
+	Fixed result;
+	result._value = (this->_value << _fractionalBits) / nbr._value;
+	return result;
+}
+
+bool Fixed::operator>(const Fixed& nbr) const
+{
+	return this->_value > nbr._value;
+}
+
+bool Fixed::operator<(const Fixed& nbr) const
+{
+	return this->_value < nbr._value;
+}
+
+bool Fixed::operator>=(const Fixed& nbr) const
+{
+	return this->_value >= nbr._value;
+}
+
+bool Fixed::operator<=(const Fixed& nbr) const
+{
+	return this->_value <= nbr._value;
+}
+
+bool Fixed::operator==(const Fixed& nbr) const
+{
+	return this->_value == nbr._value;
+}
+
+bool Fixed::operator!=(const Fixed& nbr) const
+{
+	return this->_value != nbr._value;
+}
+
+Fixed& Fixed::operator++()
+{
+	_value++;
+	return *this;
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed temp(*this);
+	++(*this);
+	return temp;
+}
+
+Fixed& Fixed::max(Fixed& a, Fixed& b)
+{
+	return (a._value > b._value) ? a : b;
+}
+
+const Fixed& Fixed::max(const Fixed& a, const Fixed& b)
+{
+	return (a._value > b._value) ? a : b;
+}
+
+Fixed& Fixed::min(Fixed& a, Fixed& b)
+{
+	return (a._value < b._value) ? a : b;
+}
+
+const Fixed& Fixed::min(const Fixed& a, const Fixed& b)
+{
+	return (a._value < b._value) ? a : b;
 }
