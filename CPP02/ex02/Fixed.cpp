@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 15:04:10 by macaruan          #+#    #+#             */
-/*   Updated: 2025/11/26 17:12:14 by macaruan         ###   ########.fr       */
+/*   Updated: 2025/11/27 16:51:49 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,6 +141,19 @@ Fixed Fixed::operator++(int)
 {
 	Fixed temp(*this);
 	++(*this);
+	return temp;
+}
+
+Fixed& Fixed::operator--()
+{
+	_value--;
+	return *this;
+}
+
+Fixed Fixed::operator--(int)
+{
+	Fixed temp(*this);
+	--(*this);
 	return temp;
 }
 

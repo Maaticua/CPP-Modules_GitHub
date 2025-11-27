@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 15:04:12 by macaruan          #+#    #+#             */
-/*   Updated: 2025/11/26 17:12:08 by macaruan         ###   ########.fr       */
+/*   Updated: 2025/11/27 16:51:15 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ class Fixed
 
 		Fixed& operator++();
 		Fixed operator++(int);
+		Fixed& operator--();
+		Fixed operator--(int);
 
 		int getRawBits() const;
 		void setRawBits(int const raw);
