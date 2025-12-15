@@ -6,22 +6,23 @@
 #    By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/27 17:02:30 by macaruan          #+#    #+#              #
-#    Updated: 2025/12/15 15:51:50 by macaruan         ###   ########.fr        #
+#    Updated: 2025/12/15 16:29:46 by macaruan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = scavtrap
+NAME = Fragtrap
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp \
 		ClapTrap.cpp \
-		ScavTrap.cpp
+		ScavTrap.cpp \
+		FragTrap.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-HEADERS = ClapTrap.hpp ScavTrap.hpp
+HEADERS = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 GREEN = \033[0;32m
 RED = \033[0;31m

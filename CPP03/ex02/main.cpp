@@ -6,32 +6,37 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:02:27 by macaruan          #+#    #+#             */
-/*   Updated: 2025/12/15 15:53:47 by macaruan         ###   ########.fr       */
+/*   Updated: 2025/12/15 16:28:06 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void)
 {
-	std::cout << "=== Test ScavTrap ===" << std::endl;
+	std::cout << "=== Test FragTrap ===" << std::endl;
+
 	std::cout << "\n--- Creation ---" << std::endl;
-	ScavTrap scav1("Guardian");
+	FragTrap frag1("Warrior");
 
-	std::cout << "\n--- Attaque ScavTrap ---" << std::endl;
-	scav1.attack("Enemy");
+	std::cout << "\n--- Attaque FragTrap ---" << std::endl;
+	frag1.attack("Target");
 
-	std::cout << "\n--- Mode Gate keeper ---" << std::endl;
-	scav1.guardGate();
+	std::cout << "\n--- High Five ---" << std::endl;
+	frag1.highFivesGuys();
 
 	std::cout << "\n--- Test degats ---" << std::endl;
-	scav1.takeDamage(50);
-	scav1.beRepaired(20);
+	frag1.takeDamage(40);
+	frag1.beRepaired(15);
+
+	std::cout << "\n--- Test epuisement energie ---" << std::endl;
+	for (int i = 0; i < 100; i++)
+		frag1.attack("Enemy");
+	frag1.attack("Enemy");
 
 	std::cout << "\n--- Constructeur de copie ---" << std::endl;
-	ScavTrap scav2(scav1);
+	FragTrap frag2(frag1);
 
 	std::cout << "\n--- Destructeurs ---" << std::endl;
-
 	return (0);
 }

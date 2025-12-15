@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 14:06:13 by macaruan          #+#    #+#             */
-/*   Updated: 2025/12/15 14:22:16 by macaruan         ###   ########.fr       */
+/*   Updated: 2025/12/15 16:07:19 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ class ScavTrap : public ClapTrap
 		void attack(const std::string& target);
 		void guardGate();
 };
-
 
 #endif
