@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:02:22 by macaruan          #+#    #+#             */
-/*   Updated: 2025/12/15 11:32:39 by macaruan         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:54:13 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ ClapTrap::ClapTrap() : _name("Default"), _hitPoints(10), _energyPoints(10), _att
 }
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-	std::cout << "ClapTrap" << _name << " constructor called" << std::endl;
+	std::cout << "ClapTrap " << _name << " constructor called" << std::endl;
 }
 ClapTrap::ClapTrap(const ClapTrap& other)
 {

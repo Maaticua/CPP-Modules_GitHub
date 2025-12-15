@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:02:24 by macaruan          #+#    #+#             */
-/*   Updated: 2025/12/11 12:31:19 by macaruan         ###   ########.fr       */
+/*   Updated: 2025/12/15 14:09:01 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string _name;
 		int _hitPoints;
 		int _energyPoints;
