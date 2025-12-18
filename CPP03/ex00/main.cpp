@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:02:27 by macaruan          #+#    #+#             */
-/*   Updated: 2025/12/15 11:49:17 by macaruan         ###   ########.fr       */
+/*   Updated: 2025/12/17 16:37:45 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(void)
 	std::cout << "\n=== Test epuisement energie ===" << std::endl;
 	for (int i = 0; i < 9; i++)
 		clap1.attack("target");
-	clap1.attack("target");
+	//clap1.attack("target");
 
 	std::cout << "\n=== Test degats mortels ===" << std::endl;
 	clap2.takeDamage(15);

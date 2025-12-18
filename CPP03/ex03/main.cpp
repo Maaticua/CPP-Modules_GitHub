@@ -6,32 +6,37 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:02:27 by macaruan          #+#    #+#             */
-/*   Updated: 2025/12/17 16:41:32 by macaruan         ###   ########.fr       */
+/*   Updated: 2025/12/16 16:22:44 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int	main(void)
 {
-	std::cout << "=== Test ScavTrap ===" << std::endl;
+	std::cout << "=== Test DiamondTrap ===" << std::endl;
+
 	std::cout << "\n--- Creation ---" << std::endl;
-	ScavTrap scav1("Guardian");
+	DiamondTrap diamond1("Ruby");
 
-	std::cout << "\n--- Attaque ScavTrap ---" << std::endl;
-	scav1.attack("an Enemy");
-
-	std::cout << "\n--- Mode Gate keeper ---" << std::endl;
-	scav1.guardGate();
+	std::cout << "\n--- Attaque DiamondTrap ---" << std::endl;
+	diamond1.attack("Target");
 
 	std::cout << "\n--- Test degats ---" << std::endl;
-	scav1.takeDamage(50);
-	scav1.beRepaired(20);
+	diamond1.takeDamage(40);
+	diamond1.beRepaired(15);
+
+	std::cout << "\n--- Test epuisement energie ---" << std::endl;
+	for (int i = 0; i < 100; i++)
+		diamond1.attack("Enemy");
+	diamond1.attack("Enemy");
 
 	std::cout << "\n--- Constructeur de copie ---" << std::endl;
-	ScavTrap scav2(scav1);
+	DiamondTrap frag2(diamond1);
+
+	std::cout << "\n--- Test WhoAmI ---" << std::endl;
+	diamond1.whoAmI();
 
 	std::cout << "\n--- Destructeurs ---" << std::endl;
-
 	return (0);
 }

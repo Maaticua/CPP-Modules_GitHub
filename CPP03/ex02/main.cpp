@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:02:27 by macaruan          #+#    #+#             */
-/*   Updated: 2025/12/15 16:28:06 by macaruan         ###   ########.fr       */
+/*   Updated: 2025/12/17 16:49:17 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(void)
 	std::cout << "\n--- Test epuisement energie ---" << std::endl;
 	for (int i = 0; i < 100; i++)
 		frag1.attack("Enemy");
-	frag1.attack("Enemy");
+	//frag1.attack("Enemy");
 
 	std::cout << "\n--- Constructeur de copie ---" << std::endl;
 	FragTrap frag2(frag1);
