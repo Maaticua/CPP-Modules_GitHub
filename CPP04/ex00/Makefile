@@ -6,7 +6,7 @@
 #    By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/27 17:02:30 by macaruan          #+#    #+#              #
-#    Updated: 2025/12/26 11:25:49 by macaruan         ###   ########.fr        #
+#    Updated: 2026/01/07 12:37:36 by macaruan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,16 +15,20 @@ NAME = animals
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS =	Animal.cpp	\
-		Cat.cpp		\
-		Dog.cpp		\
-		main.cpp	\
+SRCS =	Animal.cpp		\
+		WrongAnimal.cpp	\
+		Cat.cpp			\
+		WrongCat.cpp	\
+		Dog.cpp			\
+		main.cpp		\
 
 OBJS = $(SRCS:.cpp=.o)
 
-HEADERS =	Animal.hpp	\
-			Cat.hpp		\
-			Dog.hpp		\
+HEADERS =	Animal.hpp		\
+			WrongAnimal.hpp	\
+			Cat.hpp			\
+			WrongCat.hpp	\
+			Dog.hpp			\
 
 GREEN = \033[0;32m
 RED = \033[0;31m
