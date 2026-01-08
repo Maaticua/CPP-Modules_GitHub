@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 10:24:08 by macaruan          #+#    #+#             */
-/*   Updated: 2025/12/29 10:19:10 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/01/08 11:19:47 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,17 @@ int main()
 	const int N = 4;
 	Animal* animals[N];
 
-	// Moitié Dog, moitié Cat
+	// 1er moitié Dog, 2eme moitié Cat
 	for (int i = 0; i < N/2; i++)
 		animals[i] = new Dog();
 	for (int i = N/2; i < N; i++)
 		animals[i] = new Cat();
 
-	// Utilisation
+	std::cout << "\n=== Test Makesound ===" << std::endl;
 	for (int i = 0; i < N; i++)
 		animals[i]->makeSound();
 
-	// Destruction
+	std::cout << "\n=== Destructor ===" << std::endl;
 	for (int i = 0; i < N; i++)
 		delete animals[i];
 
