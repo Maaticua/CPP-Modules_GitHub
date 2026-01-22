@@ -3,12 +3,12 @@ NAME = Bureaucrat
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS =	main.cpp 		/
-		Bureaucrat.cpp	/
+SRCS =	Bureaucrat.cpp	\
+		main.cpp		\
 
 OBJS = $(SRCS:.cpp=.o)
 
-HEADERS =	Bureaucrat.hpp
+HEADERS =	Bureaucrat.hpp \
 
 GREEN = \033[0;32m
 RED = \033[0;31m
