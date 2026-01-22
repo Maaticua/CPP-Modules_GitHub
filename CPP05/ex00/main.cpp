@@ -6,7 +6,19 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:27:49 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/12 15:27:50 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/01/22 11:28:32 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Bureaucrat.hpp"
+
+int main()
+{
+	Bureaucrat B1;
+	
+	Bureaucrat("B2", 1);
+	Bureaucrat("B3", 150);
+	Bureaucrat("B4", 75);
+
+	return 0;
+}

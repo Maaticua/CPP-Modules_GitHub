@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:27:41 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/22 10:54:13 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/01/22 11:21:20 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,37 @@ Bureaucrat::~Bureaucrat()
 const std::string& Bureaucrat::getName() const
 {
 	return (this->name);
+}
+
+int Bureaucrat::getGrade() const
+{
+	return this->grade;
+}
+
+void Bureaucrat::incrementGrade()
+{
+	if (this->grade - 1 < 1)
+		throw GradeTooHighException();
+	this->grade--;
+}
+void Bureaucrat::decrementGrade()
+{
+	if (this->grade + 1 > 150)
+		throw GradeTooLowException();
+	this->grade++;
+}
+
+const char* Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return "Grade is too High !";
+}
+
+const char* Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return "Grade is too Low !";
+}
+std::ostream& operator<<(std::ostream& os, const Bureaucrat& b)
+{
+	os << b.getName() << ", bureaucrat grade " << b.getGrade() << ".";
+	return os;
 }
