@@ -6,12 +6,12 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:55:37 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/21 12:07:10 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/01/22 10:35:39 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRATE_HPP
-# define BUREAUCRATE_HPP
+#ifndef BUREAUCRAT_HPP
+# define BUREAUCRAT_HPP
 
 # include <string>
 # include <exception>
@@ -33,8 +33,8 @@ class Bureaucrat
 	const	std::string& getName() const;
 	int		getGrade() const;
 
-	void	incremantGrade();
-	void	decremantGrade();
+	void	incrementGrade();
+	void	decrementGrade();
 
 	class GradeTooHighException : public std::exception
 	{
