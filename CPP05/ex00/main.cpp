@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:27:49 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/22 13:29:03 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/01/22 13:40:49 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,38 @@ int main()
 		std::cerr << "Exception caught: " << e.what() << '\n';
 	}
 
+	std::cout << std::endl;
+	std::cout << "=== Test 6: Constructeur de copie ===" << std::endl;
+	try
+	{
+		Bureaucrat Original("Original", 42);
+		Bureaucrat Copy(Original);
+		std::cout << "Original: " << Original  << std::endl;
+		std::cout << "Copy: " << Copy << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 
-	
+
+	std::cout << std::endl;
+	std::cout << "=== Test 7: Operateur d'affectation ===" << std::endl;
+	try
+	{
+		Bureaucrat First("First", 10);
+		Bureaucrat Second("Second", 100);
+		std::cout << "Avant affectation First = " << First << std::endl;
+		std::cout << "Avant affectation Second = " << Second << std::endl;
+		Second = First;
+		std::cout << std::endl;
+		std::cout << "Apres affectation Second = " << Second << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+
 	return 0;
 }
