@@ -6,102 +6,100 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:27:49 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/22 13:45:43 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/01/22 16:17:45 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Form.hpp"
 #include "Bureaucrat.hpp"
 #include <iostream>
 
 int main()
 {
-	std::cout << "=== Test 1: Creation de bureaucrates valide ===" << std::endl;
+	std::cout << "=== Test 1: Creation de formulaires valides ===" << std::endl;
 	try
 	{
-		Bureaucrat B1("B1", 1);
-		std::cout << B1 << std::endl;
+		Form f1("Tax Form", 50, 25);
+		std::cout << f1 << std::endl;
 
-		Bureaucrat B2("B2", 75);
-		std::cout << B2 << std::endl;
+		Form f2("Medical Form", 100, 75);
+		std::cout << f2 << std::endl;
 
-		Bureaucrat B3("B3", 150);
-		std::cout << B3 << std::endl;
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << "Exception" << e.what() << '\n';
-	}
-
-	std::cout << std::endl;
-	std::cout << "=== Test 2: Creation de bureaucrates TooBig ===" << std::endl;
-	try
-	{
-		Bureaucrat IB1("TooHighBureaucrat", 0);
-		std::cout << IB1 << std::endl;
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << "Exception caught: " << e.what() << '\n';
-	}
-
-	std::cout << std::endl;
-	std::cout << "=== Test 3: Creation de bureaucrates TooLow ===" << std::endl;
-	try
-	{
-		Bureaucrat IB2("TooLowBureaucrat", 151);
-		std::cout << IB2 << std::endl;
+		Form f3("Top Secret", 1, 1);
+		std::cout << f3 << std::endl;
 
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << "Exception caught: " << e.what() << '\n';
+		std::cerr << e.what() << '\n';
 	}
 
 	std::cout << std::endl;
-	std::cout << "=== Test 4: Incrementation du grade jusqu'a l'echec ===" << std::endl;
+	std::cout << "=== Test 2: Creation de formulaire trop haut lvl ===" << std::endl;
 	try
 	{
-		Bureaucrat B4("B4", 3);
-		std::cout << "Avant: " << B4 << std::endl;
-		B4.incrementGrade();
-		std::cout << "Apres incrementation: " << B4 << std::endl;
-		B4.incrementGrade();
-		std::cout << "Apres incrementation: " << B4 << std::endl;
-		B4.incrementGrade();
-		std::cout << "Apres incrementation: " << B4 << std::endl;
+		Form fi1("Too high", 0, 50);
+		std::cout << fi1 << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << "Exception caught: " << e.what() << '\n';
+		std::cerr << "Exception caught " << e.what() << '\n';
 	}
 
-
 	std::cout << std::endl;
-	std::cout << "=== Test 5: Decrementation du grade jusqu'a l'echec ===" << std::endl;
+	std::cout << "=== Test 3: Creation de formulaire trop bas lvl ===" << std::endl;
 	try
 	{
-		Bureaucrat B5("B5", 148);
-		std::cout << "Avant: " << B5 << std::endl;
-		B5.decrementGrade();
-		std::cout << "Apres decrementation: " << B5 << std::endl;
-		B5.decrementGrade();
-		std::cout << "Apres decrementation: " << B5 << std::endl;
-		B5.decrementGrade();
-		std::cout << "Apres decrementation: " << B5 << std::endl;
+		Form fi2("Too low", 50, 151);
+		std::cout << fi2 << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << "Exception caught: " << e.what() << '\n';
+		std::cerr << "Exception caught " << e.what() << '\n';
 	}
 
 	std::cout << std::endl;
-	std::cout << "=== Test 6: Constructeur de copie ===" << std::endl;
+	std::cout << "=== Test 4: Bureaucrate good grade sign Form ===" << std::endl;
 	try
 	{
-		Bureaucrat Original("Original", 42);
-		Bureaucrat Copy(Original);
-		std::cout << "Original: " << Original  << std::endl;
-		std::cout << "Copy: " << Copy << std::endl;
+		Bureaucrat B1("B1", 30);
+		Form form("request form", 50, 25);
+
+		std::cout << "Avant signature: " << form << std::endl;
+		B1.signForm(form);
+		std::cout << "Apres signature: " << form << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+	std::cout << std::endl;
+	std::cout << "=== Test 5: Bureaucrate bad grade sign Form ===" << std::endl;
+	try
+	{
+		Bureaucrat B2("B2", 100);
+		Form form("Important Document", 50, 25);
+
+		std::cout << "Avant signature: " << form << std::endl;
+		B2.signForm(form);
+		std::cout << "Apres signature: " << form << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+	std::cout << std::endl;
+	std::cout << "=== Test 6: Bureaucrate limit grade sign Form ===" << std::endl;
+	try
+	{
+		Bureaucrat B3("B3", 50);
+		Form form("Bulletin ", 50, 25);
+
+		std::cout << "Avant signature: " << form << std::endl;
+		B3.signForm(form);
+		std::cout << "Apres signature: " << form << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -110,16 +108,33 @@ int main()
 
 
 	std::cout << std::endl;
-	std::cout << "=== Test 7: Operateur d'affectation ===" << std::endl;
+	std::cout << "=== Test 7: Formulaire deja signer ===" << std::endl;
 	try
 	{
-		Bureaucrat First("First", 10);
-		Bureaucrat Second("Second", 100);
-		std::cout << "Avant affectation First = " << First << std::endl;
-		std::cout << "Avant affectation Second = " << Second << std::endl;
-		Second = First;
-		std::cout << std::endl;
-		std::cout << "Apres affectation Second = " << Second << std::endl;
+		Bureaucrat Boss("Boss", 1);
+		Form form("Bulletin ", 10, 5);
+
+		Boss.signForm(form);
+		std::cout << "Tentative de signature a nouveau " << form << std::endl;
+		Boss.signForm(form);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+	std::cout << std::endl;
+	std::cout << "=== Test 8: plusieurs bureaucrates, un forulaire ===" << std::endl;
+	try
+	{
+		Bureaucrat B4("B4", 120);
+		Bureaucrat B5("B5", 20);
+		Form form("Complex from ", 50, 30);
+
+		std::cout << form << std::endl;
+		B4.signForm(form);
+		B5.signForm(form);
+		std::cout << form << std::endl;
 	}
 	catch(const std::exception& e)
 	{
