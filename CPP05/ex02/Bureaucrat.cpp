@@ -6,12 +6,12 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:27:41 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/22 15:12:18 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/01/23 10:51:52 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat() : name("default"), grade(150)
 {}
@@ -74,7 +74,7 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 	return "Grade is too Low !";
 }
 
-void Bureaucrat::signForm(Form& form)
+void Bureaucrat::signForm(AForm& form)
 {
 	try
 	{

@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:55:37 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/22 15:03:51 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/01/23 10:50:28 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <exception>
 # include <iostream>
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -37,7 +37,8 @@ class Bureaucrat
 
 	void	incrementGrade();
 	void	decrementGrade();
-	void	signForm(Form& form);
+	void	signForm(AForm& form);
+	void	executeForm(AForm const & form) const;
 
 	class GradeTooHighException : public std::exception
 	{
