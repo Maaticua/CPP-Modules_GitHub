@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 10:33:17 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/23 15:45:12 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/01/23 15:58:08 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm", 72, 45
 {
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const std::string &target) : AForm("ShrubberyCreation", 72, 45), target(target)
+RobotomyRequestForm::RobotomyRequestForm(const std::string &target) : AForm("RobotomyRequestForm", 72, 45), target(target)
 {
 }
 

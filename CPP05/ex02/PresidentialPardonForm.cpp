@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 10:33:12 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/23 15:49:57 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/01/26 11:27:34 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm
 {
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const std::string &target) : AForm("ShrubberyCreation", 25, 5), target(target)
+PresidentialPardonForm::PresidentialPardonForm(const std::string &target) : AForm("PresidentialPardonForm", 25, 5), target(target)
 {
 }
 
@@ -38,7 +38,11 @@ PresidentialPardonForm::~PresidentialPardonForm()
 {
 }
 
-void PresidentialPardonForm::execute(Bureaucrat const & execute) const
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
-
+	if (!this->getSigned())
+		throw FormNotSignedException();
+	if (executor.getGrade() > this->getGradeToExecute())
+		throw GradeTooLowException();
+	std::cout << this->target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }
