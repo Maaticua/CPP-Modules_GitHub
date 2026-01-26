@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 11:39:12 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/26 12:17:25 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/01/26 12:29:11 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,4 @@ AForm* Intern::makeForm(std::string forName, std::string target)
 
 	std::cerr << "Error: Form type \"" << forName << "\" does not exist !" << std::endl;
 	return NULL;
-
 }
