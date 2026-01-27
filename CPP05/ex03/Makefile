@@ -1,10 +1,11 @@
-NAME = Complexe
+NAME = CompromisedInternship
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	AForm.cpp					\
 		Bureaucrat.cpp				\
+		Intern.cpp					\
 		main.cpp					\
 		PresidentialPardonForm.cpp	\
 		RobotomyRequestForm.cpp		\
@@ -13,6 +14,7 @@ SRCS =	AForm.cpp					\
 OBJS = $(SRCS:.cpp=.o)
 
 HEADERS =	AForm.hpp					\
+			Intern.hpp					\
 			Bureaucrat.hpp				\
 			PresidentialPardonForm.hpp	\
 			RobotomyRequestForm.hpp		\

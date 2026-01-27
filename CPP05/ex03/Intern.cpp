@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 11:39:12 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/26 12:29:11 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/01/26 16:03:23 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static AForm* createPresidential(std::string target)
 }
 AForm* Intern::makeForm(std::string forName, std::string target)
 {
-	std::string formType[3] = {"ShrubberyCreation" , "RobotomyRequest", "PresidentialPardon"}; // * Tab des noms des forms
+	std::string formType[3] = {"shrubbery creation" , "robotomy request", "presidential pardon"}; // * Tab des noms des forms
 	AForm* (*formCreators[3])(std::string) = {&createShrubbery, &createRobotomy, &createPresidential}; // * Tab de * sur fonction
 
 	for (int i = 0; i < 3; i++)
