@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 16:28:01 by macaruan          #+#    #+#             */
-/*   Updated: 2026/02/05 15:06:34 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/02/05 15:11:32 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,23 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
+
+	std::cout << GREEN << "=== Test 3 : BIG test ===" << RESET << std::endl;
+	try
+	{
+		Span bigsp(10000);
+		std::vector<int> v;
+		for (int i = 0; i < 10000; i++)
+			v.push_back(i*2);
+		bigsp.addRange(v.begin(), v.end());
+		std::cout << YELLOW << "Shortest : " << RESET << bigsp.shortestSpan() << std::endl;
+		std::cout << YELLOW << "Longest : " << RESET << bigsp.longestSpan() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
 
 	return 0;
 
