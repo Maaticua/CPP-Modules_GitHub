@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 16:28:06 by macaruan          #+#    #+#             */
-/*   Updated: 2026/02/05 12:36:39 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/02/05 14:41:28 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ class Span
 		void addRange(T begin, T end)
 		{
 			if (_vec.size() + std::distance(begin, end) > _n)
-				throw SpanFullExeption();
-			_vec.insert(_vec.end(), beign, end);
+				throw SpanFullException();
+			_vec.insert(_vec.end(), begin, end);
 		}
 
 		class SpanFullException : public std::exception
