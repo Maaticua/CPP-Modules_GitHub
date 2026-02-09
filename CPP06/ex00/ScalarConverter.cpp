@@ -6,13 +6,13 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 11:33:20 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/28 12:12:42 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/02/09 14:37:57 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
-void ScalarConverter::convert(std::string const & arg)
+void ScalarConverter::convert(std::string const &arg)
 {
 	double val;
 	char *end;
