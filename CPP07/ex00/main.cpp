@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:52:52 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/28 16:03:52 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/02/10 10:43:17 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,25 @@
 
 int main( void )
 {
-	int a = 2;
-	int b = 3;
 
-	::swap( a, b );
+
+	char a = '2';
+	char b = '3';
+
+	std::cout << "Before Swap Char: " << std::endl;
 	std::cout << "a = " << a << ", b = " << b << std::endl;
-	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+	::swap( a, b );
+	std::cout << "After Swap char : " << std::endl;
+	std::cout << "a = " << a << ", b = " << b << std::endl;
+	std::cout << "min = " << ::min( a, b ) << std::endl;
+	std::cout << "max = " << ::max( a, b ) << std::endl << std::endl;
 
-	std::string c = "chaine 1";
-	std::string d = "chaine 2";
 
-	std::cout << std::endl;
-
+	std::cout << "Before Swap String: " << std::endl;
+	std::string c = "Bonjour";
+	std::string d = "Aurevoir";
+	std::cout << "c = " << c << ", d = " << d << std::endl;
+	std::cout << "After Swap String: " << std::endl;
 	::swap(c, d);
 	std::cout << "c = " << c << ", d = " << d << std::endl;
 	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;

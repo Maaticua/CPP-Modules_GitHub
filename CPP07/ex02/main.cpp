@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 11:17:11 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/29 12:08:35 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/02/10 14:23:37 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int main()
 		Array<int> copy = numbers;
 		copy[2] = 2;
 		std::cout << "Original index 2 (doit rester 20) : " << numbers[2] << std::endl;
-		std::cout << "Copie index 2 (doit etre 42) : " << copy[2] << std::endl;
+		std::cout << "Copie index 2 (doit etre 2) : " << copy[2] << std::endl;
 
 		std::cout << std::endl;
 		std::cout << "===== Test 3 : Hors limit =====" << std::endl;

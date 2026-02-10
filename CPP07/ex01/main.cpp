@@ -6,21 +6,22 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 16:13:34 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/28 16:18:24 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/02/10 14:38:34 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
 #include <iostream>
 #include <string>
+#include <exception>
 
 template <typename T>
-void printElement(T const & x)
+void printElement(T const &x)
 {
 	std::cout << x << " ";
 }
 
-void increment(int & n)
+void increment(int &n)
 {
 	n++;
 }

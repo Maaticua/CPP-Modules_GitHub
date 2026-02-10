@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 10:42:27 by macaruan          #+#    #+#             */
-/*   Updated: 2026/01/29 11:13:57 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/02/10 14:36:20 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,9 @@ int main(int, char**)
     }
     try
     {
-        numbers[-2] = 0;
+		std::cout << numbers[10] << std::endl;
+        numbers[10] = 0;
+		std::cout << numbers[10] << std::endl;
     }
     catch(const std::exception& e)
     {
@@ -50,7 +52,9 @@ int main(int, char**)
     }
     try
     {
-        numbers[MAX_VAL] = 0;
+		std::cout << numbers[MAX_VAL - 1] << std::endl;
+        numbers[MAX_VAL - 1] = 42;
+		std::cout << numbers[MAX_VAL - 1] << std::endl;
     }
     catch(const std::exception& e)
     {
