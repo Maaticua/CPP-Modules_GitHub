@@ -6,7 +6,7 @@
 /*   By: macaruan <macaruan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 15:27:23 by macaruan          #+#    #+#             */
-/*   Updated: 2026/02/16 15:54:37 by macaruan         ###   ########.fr       */
+/*   Updated: 2026/02/19 10:57:24 by macaruan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ class PmergeMe
 		// ! Ford Johnson version <deque>
 		void sortDeque();
 		std::deque<int> fordJohnsonDeque(std::deque<int>& lst);
+
+		std::vector<size_t> generateJacobsthal(size_t n);
+		bool isPositiveInt(const std::string &s);
 
 	public:
 		PmergeMe();
